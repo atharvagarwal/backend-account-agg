@@ -15,10 +15,7 @@ const main = async () => {
 
   app.use(
     cors({
-      origin: [
-        "*"
-      
-      ],
+      origin:"*",
       methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
       credentials: true,
     })
