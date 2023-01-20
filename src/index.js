@@ -15,9 +15,10 @@ const main = async () => {
 
 app.use(
     cors({
-      origin:false,
-      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-      credentials: true,
+   "origin": ["*","https://hackathon-account-aggregator.vercel.app/","https://hackathon-account-aggregator.vercel.app"],
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
     })
   )
   app.use(cookieParser());
