@@ -18,18 +18,12 @@ const main = async () => {
       origin:"https://hackathon-account-aggregator.vercel.app",
       methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
       credentials: true,
-      allowedHeaders:['Content-Type', 'application/json']
     })
   );
   app.use(cookieParser());
   app.use(bodyParser.json());
   
-  app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  next();
-});
+
 
   mongoose.connect(
     process.env.MONGO_URI,
