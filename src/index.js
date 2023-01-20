@@ -15,7 +15,7 @@ const main = async () => {
 
   app.use(
     cors({
-      origin:"https://hackathon-account-aggregator.vercel.app/",
+      origin:"https://hackathon-account-aggregator.vercel.app",
       methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
       credentials: true,
     })
