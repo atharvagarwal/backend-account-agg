@@ -13,14 +13,14 @@ const register = require("./routes/auth/register");
 const main = async () => {
   const app = express();
 
-app.use(
+ app.use(
     cors({
-   "origin": ["*","https://hackathon-account-aggregator.vercel.app/","https://hackathon-account-aggregator.vercel.app"],
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
-  "optionsSuccessStatus": 204
+      origin:"https://hackathon-account-aggregator.vercel.app",
+      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+      credentials: true,
+      allowedHeaders:['Content-Type', 'application/json']
     })
-  )
+  );
   app.use(cookieParser());
   app.use(bodyParser.json());
 
