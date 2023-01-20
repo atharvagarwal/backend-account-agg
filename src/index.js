@@ -28,7 +28,7 @@ const main = async () => {
   app.use(bodyParser.json());
 
   mongoose.connect(
-    "mongodb://localhost:27017/example",
+    process.env.MONGO_URI,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
